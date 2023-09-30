@@ -1,0 +1,28 @@
+@import url(background.css);
+@import url(changeText.css);
+@import url(intermitentCursor.css);
+@import url('https://fonts.googleapis.com/css2?family=Rubik');
+
+.lT {
+    color: white;
+    font-family: 'Rubik';
+}
+
+.sameLine {
+    display: inline-block;
+    
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.divFlex {
+    display: flex;
+}
+
+.cursor-text {
+    display: none;
+    color: white;
+}
