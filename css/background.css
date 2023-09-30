@@ -1,8 +1,15 @@
+* {
+  z-index: 1;
+}
+
 html {
   font: 5vmin/1.3 Serif;
   overflow: hidden;
   background: #123;
+  z-index: -1;
+  /* Asignar un valor negativo para enviar el fondo al fondo del stack de capas */
 }
+
 
 body,
 head {

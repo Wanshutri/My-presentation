@@ -1,21 +1,21 @@
 const textElement = document.getElementById('changeText');
-const texts = ['Programmer', 'Developer', 'Computer Enginner', 'Creative', 'Smart', 'Handsome'];
+const texts = ['Programmer', 'Developer', 'Designer', 'Computer Enginner'];
 let currentIndex = 0;
 let currentText = '';
 let isDeleting = false;
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     const cursorElement = document.querySelector('.cursor-text');
 
-    setTimeout(function() {
+    setTimeout(function () {
         cursorElement.style.display = 'inline';
-    }, 2800); // Espera 3 segundos (3000 milisegundos) después de que la página se haya cargado
+    }, 2800);
 });
 
 
 function changeText() {
     const targetText = texts[currentIndex];
-    
+
     if (isDeleting) {
         currentText = targetText.substring(0, currentText.length - 1);
     } else {
@@ -23,7 +23,7 @@ function changeText() {
     }
 
     textElement.textContent = currentText;
-    
+
     if (!isDeleting && currentText === targetText) {
         isDeleting = true;
         setTimeout(changeText, 2000);
@@ -36,4 +36,5 @@ function changeText() {
     }
 }
 
-changeText(); // Comienza el efecto al cargar la página
+changeText();
+
