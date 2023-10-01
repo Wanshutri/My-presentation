@@ -78,10 +78,17 @@ svg {
 
 .nav-item.selected {
     color: white;
-    transform: scale(1.2);
+    transform: scale(1.3);
+    
 }
 
-.nav-item:hover {
-    transform: scale(1.3);
+.nav-item:not(.selected):hover {
+    transform: scale(1.2);
     color: lightgray;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out, pointer-events 0s 0.5s;
 }

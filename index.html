@@ -17,8 +17,9 @@
     <div id="homeContent">
         <div class="divFlex centered">
             <div class="centered" style="margin-top: 15%; margin-left: 5%;">
-                <h4 data-aos="fade-right" data-aos-duration="1500" class="lT">Hi!, my name is Felipe Valenzuela</h1>
-                    <h5 data-aos="fade-right" data-aos-delay="1500" data-aos-duration="1500" class="lT sameLine">I'm
+                <h4 data-aos="fade-right" data-aos-duration="1500" class="lT">Hi!, i'm Felipe Valenzuela</h1>
+                    <h5 data-aos="fade-right" data-aos-delay="1500" data-aos-duration="1500" class="lT sameLine">And i'm
+                        a
                     </h5>
                     <h5 data-aos="fade-right" data-aos-delay="1500" data-aos-duration="1500" id="changeText"
                         class="lT sameLine">Programmer</h5>
@@ -45,21 +46,34 @@
             <br>
         </div>
     </div>
+    <div id="skillsContent" style="display: none;">
+        <h1>skills</h1>
+    </div>
+    <div id="proyectsContent" style="display: none;">
+        <h1>proyects</h1>
+    </div>
+    <div id="cvContent" style="display: none;">
+        <h1>cv</h1>
+    </div>
     <div class="divFlex fixed-bottom">
         <div data-aos="fade-up" data-aos-duration="1500" data-aos-offset="0"
             class="nav justify-content-center centered inline" style="margin-top: 15%;">
-            <button onclick="viewSection('Home')" class="lT nav-item selected" style="font-size: 5vh;">Home</button>
-            <button onclick="viewSection('Skills')" class="lT nav-item" style="font-size: 5vh;">Skills</button>
-            <button onclick="viewSection('Proyects')" class="lT nav-item" style="font-size: 5vh;">Proyects</button>
-            <button onclick="viewSection('Contact')" class="lT nav-item" style="font-size: 5vh;">Contact</button>
+            <button onclick="alternateViews('h')" class="lT nav-item selected" style="font-size: 5vh;">Home</button>
+            <button onclick="alternateViews('s')" class="lT nav-item" style="font-size: 5vh;">Skills</button>
+            <button onclick="alternateViews('p')" class="lT nav-item" style="font-size: 5vh;">Proyects</button>
+            <button onclick="alternateViews('c')" class="lT nav-item" style="font-size: 5vh;">CV</button>
         </div>
     </div>
 </body>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/changeText.js"></script>
 <script src="js/aos.js"></script>
+<script src="js/changeView.js"></script>
 <script>
-
+    const homeContent = document.getElementById("homeContent");
+    const skillsContent = document.getElementById("skillsContent");
+    const proyectsContent = document.getElementById("proyectsContent");
+    const cvContent = document.getElementById("cvContent");
     AOS.init();
     function openLink(page) {
         if (page == "GitHub") {
@@ -80,34 +94,6 @@
     navItems.forEach(item => {
         item.addEventListener('click', handleNavItemClick);
     });
-    const homeDiv = document.getElementById('homeContent');
-    const skillsDiv = document.getElementById('skillsContent');
-    const projectsDiv = document.getElementById('projectsContent');
-    const contactDiv = document.getElementById('contactContent');
-
-    function viewSection(sec) {
-        const homeDiv = document.getElementById('homeContent');
-const computedStyles = window.getComputedStyle(homeDiv);
-const displayValue = computedStyles.getPropertyValue('display');
-
-console.log('Valor actual del estilo display:', displayValue);
-
-        homeDiv.style.display = 'none';
-        skillsDiv.style.display = 'none';
-        projectsDiv.style.display = 'none';
-        contactDiv.style.display = 'none';
-
-        if (sec == "Home") {
-            homeDiv.style.display = 'block';
-        } else if (sec == "Skills") {
-            skillsDiv.style.display = 'block';
-        } else if (sec == "Projects") {
-            projectsDiv.style.display = 'block';
-        } else if (sec == "Contact") {
-            contactDiv.style.display = 'block';
-        }
-    }
-
 </script>
 
 </html>
