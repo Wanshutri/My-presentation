@@ -79,7 +79,7 @@ svg {
 .nav-item.selected {
     color: white;
     transform: scale(1.3);
-    
+
 }
 
 .nav-item:not(.selected):hover {
@@ -91,4 +91,53 @@ svg {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease-in-out, pointer-events 0s 0.5s;
+}
+
+
+.btn-primary:focus,
+.btn-primary:active:focus {
+    background-color: black;
+    box-shadow: none;
+}
+
+.nav-item {
+    font-size: 2vw;
+}
+
+@media (max-width: 1200px) {
+    .lT {
+        font-size: 8vw;
+    }
+
+    .divFlex {
+        margin-top: 20vh;
+    }
+
+    .btn-group {
+        width: 90vw;
+    }
+
+    .btn-group .btn {
+        padding: 0.7vh 8vw;
+
+    }
+
+    .btn-primary:focus,
+    .btn-primary:active:focus {
+        background-color: black;
+        box-shadow: none;
+    }
+
+    .nav {
+        display: contents;
+    }
+
+    .nav-item {
+        font-size: 5vw;
+        width: min-content;
+        padding: 2vw;
+        margin: auto;
+    }
+
+
 }
