@@ -1,4 +1,5 @@
 var selected = 'h';
+
 function alternateViews(view) {
     if (selected != view) {
 
@@ -18,6 +19,24 @@ function alternateViews(view) {
         cvContent.classList.remove('fade-in');
 
         setTimeout(function () {
+
+            const langSwitch = $('#langSwitch');
+
+            langSwitch.on('change', function () {
+                const selectedLanguage = langSwitch.prop('checked') ? 'es' : 'en';
+
+                $('[data-translate]').each(function () {
+                    const key = $(this).data('translate');
+                    $(this).text(translations[selectedLanguage][key]);
+                });
+
+                if (selectedLanguage == 'en') {
+                    texts = ['Programmer', 'Developer', 'Designer', 'Computer Enginner'];
+                } else if (selectedLanguage == 'es') {
+                    texts = ['Programador', 'Desarrollador', 'Diseñador', 'Ingeniero en informatica'];
+                }
+            });
+
             homeContent.style.display = "none";
             skillsContent.style.display = "none";
             proyectsContent.style.display = "none";

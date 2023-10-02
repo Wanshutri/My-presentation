@@ -1,5 +1,7 @@
 const textElement = document.getElementById('changeText');
-const texts = ['Programmer', 'Developer', 'Designer', 'Computer Enginner'];
+var lang = document.documentElement.lang;
+var texts = ['Programmer', 'Developer', 'Designer', 'Computer Enginner'];
+
 let currentIndex = 0;
 let currentText = '';
 let isDeleting = false;

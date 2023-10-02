@@ -1,11 +1,18 @@
 @import url(background.css);
 @import url(intermitentCursor.css);
 @import url('https://fonts.googleapis.com/css2?family=Rubik');
-@import url('https://fonts.googleapis.com/css2?family=Bayon');
 
 .titleSec {
-    margin-top: 30vh;
+    position: absolute;
     margin-left: 10vw;
+    margin-top: 25vh;
+}
+
+.divLang {
+    position: fixed;
+    font-size: 5vh;
+    margin-left: 80vw;
+
 }
 
 .lT {
@@ -21,10 +28,6 @@
 .centered {
     margin-left: auto;
     margin-right: auto;
-}
-
-.divFlex {
-    display: flex;
 }
 
 .cursor-text {
@@ -147,7 +150,7 @@ svg {
 
 .skillLt {
     color: white;
-    font-family: 'bayon';
+    font-family: '';
     margin: auto;
 }
 
@@ -170,13 +173,27 @@ svg {
     margin-left: 1.5vw;
 }
 
+.form-check-input:hover{
+    cursor: pointer;
+}
+
+
+
 @media (max-width: 1000px) {
 
     .titleSec {
-        margin-top: 10vh;
+        margin-top: 30vh;
         margin-left: 2vw;
     }
 
+    .divLang {
+        margin-left: 70vw;
+        font-size: 50%;
+    }
+
+    .form-check {
+        padding: 0;
+    }
 
     .lT {
         font-size: 8vw;
