@@ -133,14 +133,16 @@ svg {
     background-color: black;
     width: auto;
     height: 30vh;
-
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .skillObject {
-    margin-left: 2vw;
-    margin-right: 2vw;
+    margin: 0 1vw;
     transition: all 0.3s ease;
     margin-top: 2vh;
+    position: static;
+    padding: 0 2vw;
 }
 
 .imgSkill {
@@ -173,7 +175,7 @@ svg {
     margin-left: 1.5vw;
 }
 
-.form-check-input:hover{
+.form-check-input:hover {
     cursor: pointer;
 }
 
