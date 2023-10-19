@@ -183,9 +183,13 @@ svg {
 
 @media (max-width: 1000px) {
 
+    * {
+        overflow-y: hidden;
+    }
+
     .titleSec {
         margin-top: 30vh;
-        margin-left: 2vw;
+        margin-left: 4vw;
     }
 
     .divLang {
@@ -229,6 +233,11 @@ svg {
         padding: 2vw;
         margin: auto;
     }
+
+    .fixed-bottom {
+        position: absolute;
+    }
+
 
 
 }
