@@ -204,15 +204,6 @@ svg {
     transition: all 0.3s ease;
 }
 
-.dirArrow {
-    color: white;
-    height: 10vh;
-    width: 5vw;
-    margin-top: 10vh;
-    position: relative;
-    margin-left: 1.5vw;
-}
-
 .form-check-input:hover {
     cursor: pointer;
 }
@@ -275,7 +266,39 @@ svg {
     .fixed-bottom {
         position: absolute;
     }
+    
+    .skillsDiv {
+        overflow-x: scroll;
+    }
 
+    .skillObject {
+        overflow-x: hidden;
+        min-width: min-content;
+        max-width: fit-content;
+    }
 
+    .skillObject * {
+        margin: 0 auto;
+        min-width: max-content;
 
+    }
+
+    .teclb {
+        margin-top: 4vh;
+    }
+
+    #cvContent embed {
+        width: 50vw;
+        height: 30vh;
+    }
+
+    #downloadButton {
+        width: fit-content;
+        height: fit-content;
+    }
+
+    #downloadButton svg{
+        width: 10vw;
+        height: 5vh;
+    }
 }
