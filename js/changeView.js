@@ -63,10 +63,39 @@ function alternateViews(view) {
                 selected = 'c';
                 cvContent.style.display = "block";
                 cvContent.classList.add('fade-in');
+                if (window.innerWidth < 1300) {
+                    callToast();
+                }
             }
             for (var i = 0; i < navItems.length; i++) {
                 navItems[i].disabled = false;
             }
         }, 600);
     }
+}
+
+function callToast() {
+    idioma = document.documentElement.lang;
+    setTimeout(function () {
+        if (idioma == 'es') {
+            mensaje = "Si no ves un PDF, prueba el modo navegador o a descargar el archivo";
+        } else if (idioma == 'en'){
+            mensaje = "If you don't see a PDF, try the browser mode or download the file";
+        }
+
+        Toastify({
+            text: mensaje,
+            duration: 8000,
+            gravity: "center",
+            position: "center",
+            close: true,
+            stopOnFocus: true,
+            style: {
+                background: "transparent",
+                fontSize: "25%",
+
+            },
+            onClick: function () { }
+        }).showToast();
+    }, 250);
 }

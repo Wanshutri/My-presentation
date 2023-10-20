@@ -159,7 +159,7 @@
             <button onclick="alternateViews('h')" data-translate="Home" class="lT nav-item selected">Home</button>
             <button onclick="alternateViews('s')" data-translate="Skills" class="lT nav-item">Skills</button>
             <button onclick="alternateViews('p')" data-translate="Projects" class="lT nav-item">Proyects</button>
-            <button onclick="cvViews()" data-translate="CV" class="lT nav-item">CV</button>
+            <button onclick="alternateViews('c')" data-translate="CV" class="lT nav-item">CV</button>
         </div>
     </div>
 </body>
@@ -170,15 +170,13 @@
 <script src="js/translations.js"></script>
 <script src="js/toastify.js"></script>
 <script>
-    selectedLanguage = 'en';
     $(document).ready(function () {
         const langSwitch = $('#langSwitch');
 
         langSwitch.on('change', function () {
-            this.selectedLanguage = langSwitch.prop('checked') ? 'es' : 'en';
-            document.documentElement.lang = this.selectedLanguage;+
-            console.log(this.selectedLanguage)
-            console.log(document.documentElement.lang )
+            selectedLanguage = langSwitch.prop('checked') ? 'es' : 'en';
+            document.documentElement.lang = selectedLanguage;
+            console.log("Idioma seleccionado: " + document.documentElement.lang)
 
             $('[data-translate]').each(function () {
                 const key = $(this).data('translate');
@@ -225,39 +223,6 @@
         document.body.removeChild(link);
 
     });
-
-    function cvViews() {
-        alternateViews('c');
-        if (window.innerWidth < 1000) {
-            callToast(this.selectedLanguage);
-        }
-    }
-
-
-    function callToast(idioma) {
-
-        setTimeout(function () {
-            if (idioma == 'es') {
-                mensaje = "Si no ves un PDF, prueba el modo navegador o a descargar el archivo";
-            } else if (idioma == 'en'){
-                mensaje = "If you don't see a PDF, try the browser mode or download the file";
-            }
-
-            Toastify({
-                text: mensaje,
-                duration: 4000,
-                gravity: "top",
-                position: "center",
-                close: true,
-                stopOnFocus: true,
-                style: {
-                    background: "transparent",
-                    fontSize: "25%",
-                },
-                onClick: function () { }
-            }).showToast();
-        }, 700);
-    }
 
 </script>
 

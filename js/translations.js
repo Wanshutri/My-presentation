@@ -6,7 +6,7 @@ const translations = {
         "tiText" : "i'm",
         "Home": "Home",
         "Skills": "Skills",
-        "Projects": "Projects",
+        "Projects": "Proyects",
         "CV": "CV",
         "sihl" : "Skills i have learned",
         "languages" : "Languages",
