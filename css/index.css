@@ -8,11 +8,25 @@
     margin-top: 25vh;
 }
 
+::-webkit-scrollbar {
+    width: auto;
+    height: 1.3vh;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(rgb(22, 21, 21), rgb(39, 35, 35));
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(rgb(116, 114, 114), rgb(35, 35, 35));
+    border-radius: 100px;
+}
+
 .divLang {
     position: fixed;
     font-size: 5vh;
     margin-left: 80vw;
-
 }
 
 .lT {
@@ -23,6 +37,30 @@
 .sameLine {
     display: inline-block;
 
+}
+
+#cvContent embed {
+    width: 34vw;
+    height: 90vh;
+}
+
+#cvContent button{
+    height: min-content;
+    background-color: transparent;
+    border: 0;
+    margin-right: 0.5vw;
+    transition: all 0.3s ease;
+}
+
+#cvContent button:hover{
+    transform: scale(1.2);
+    border: 0;
+}
+
+#cvContent button *{
+    width: 3vw;
+    height: 10vh;
+    color: white;
 }
 
 .centered {
