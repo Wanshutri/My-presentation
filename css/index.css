@@ -208,7 +208,27 @@ svg {
     cursor: pointer;
 }
 
+.card {
+    width: fit-content;
+    height: fit-content;
+}
 
+.card-title {
+    font-size: 2vh;
+}
+
+.card-text {
+    font-size: 2vh;
+}
+
+.card .btn-primary {
+    font-size: 2vh;
+}
+
+.card-img-top {
+    width: fit-content;
+    height: fit-content;
+}
 
 @media (max-width: 1000px) {
 
