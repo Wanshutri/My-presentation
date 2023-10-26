@@ -140,7 +140,16 @@
     </div>
     </div>
     <div id="proyectsContent" style="display: none;">
-        <h1>proyects</h1>
+        <div class="d-flex">
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
     </div>
     <div id="cvContent" style="display: none;">
         <div class="d-flex" style="margin-top: 1vh;">
@@ -213,7 +222,7 @@
         });
     });
     var zoomValue = window.innerWidth > 1000 ? 63 : 100; // Zoom 63 para pantallas más grandes que 768px, 100 para pantallas más pequeñas
-    document.querySelector('#pdfviewer').src = 'assets/files/CV.pdf#toolbar=0&zoom=' + zoomValue + '&frameBorder=0';
+    document.querySelector('#pdfviewer').src = 'assets/files/CV.pdf#toolbar=1&zoom=' + zoomValue + '&frameBorder=0';
     document.getElementById("downloadButton").addEventListener("click", function () {
         var link = document.createElement("a");
         link.href = "assets/files/CV.pdf";
