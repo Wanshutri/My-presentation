@@ -2,7 +2,6 @@ var selected = 'h';
 
 function alternateViews(view) {
     if (selected != view) {
-
         var navItems = document.getElementsByClassName("nav-item");
         for (var i = 0; i < navItems.length; i++) {
             navItems[i].disabled = true;
@@ -19,7 +18,6 @@ function alternateViews(view) {
         cvContent.classList.remove('fade-in');
 
         setTimeout(function () {
-
             const langSwitch = $('#langSwitch');
 
             langSwitch.on('change', function () {
@@ -72,14 +70,16 @@ function alternateViews(view) {
             }
         }, 600);
     }
+    
 }
+
 
 function callToast() {
     idioma = document.documentElement.lang;
     setTimeout(function () {
         if (idioma == 'es') {
             mensaje = "Si no ves un PDF, prueba el modo navegador o a descargar el archivo";
-        } else if (idioma == 'en'){
+        } else if (idioma == 'en') {
             mensaje = "If you don't see a PDF, try the browser mode or download the file";
         }
 

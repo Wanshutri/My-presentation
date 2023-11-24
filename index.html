@@ -62,7 +62,7 @@
         <div class="d-flex">
             <h1 data-translate="languages" class="lT centered teclb">Languages</h1>
         </div>
-        <div class="skillsDiv d-flex centered">
+        <div class="skillsDiv langSec d-flex centered">
             <div class="skillObject skillGrid">
                 <img class="imgSkill centered" src="assets/img/csharp.png" alt="">
                 <h5 class="skillLt centered">C#</h5>
@@ -97,9 +97,9 @@
             </div>
         </div>
         <div class="d-flex">
-            <h1 data-translate="technologies" class="lT centered teclb">Technologies</h1>
+            <h1 data-translate="technologies" class="lT centered teclb" >Technologies</h1>
         </div>
-        <div class="skillsDiv d-flex">
+        <div class="skillsDiv techSec d-flex">
             <div class="skillObject skillGrid">
                 <img class="imgSkill centered" src="assets/img/django.png" alt="">
                 <h5 class="skillLt centered">Django</h5>
@@ -117,16 +117,24 @@
                 <h5 class="skillLt centered">Ionic</h5>
             </div>
             <div class="skillObject skillGrid">
+                <img class="imgSkill centered" src="assets/img/spring.png" alt="">
+                <h5 class="skillLt centered">Spring</h5>
+            </div>
+            <div class="skillObject skillGrid">
+                <img class="imgSkill centered" src="assets/img/net.png" alt="">
+                <h5 class="skillLt centered">.NET</h5>
+            </div>
+            <div class="skillObject skillGrid">
+                <img class="imgSkill centered" src="assets/img/flask.png" alt="">
+                <h5 class="skillLt centered">Flask</h5>
+            </div>
+            <div class="skillObject skillGrid">
                 <img class="imgSkill centered" src="assets/img/sqldeveloper.png" alt="">
                 <h5 class="skillLt centered">BDD</h5>
             </div>
             <div class="skillObject skillGrid">
                 <img class="imgSkill centered" src="assets/img/bootstrap.png" alt="">
                 <h5 class="skillLt centered">Bootstrap</h5>
-            </div>
-            <div class="skillObject skillGrid">
-                <img class="imgSkill centered" src="assets/img/unity.png" alt="">
-                <h5 class="skillLt centered">Unity</h5>
             </div>
             <div class="skillObject skillGrid">
                 <img class="imgSkill centered" src="assets/img/jquery.png" alt="">
@@ -140,19 +148,16 @@
                 <img class="imgSkill centered" src="assets/img/XAMPP.png" alt="">
                 <h5 class="skillLt centered">XAMPP</h5>
             </div>
+            <div class="skillObject skillGrid">
+                <img class="imgSkill centered" src="assets/img/unity.png" alt="">
+                <h5 class="skillLt centered">Unity</h5>
+            </div>
         </div>
     </div>
     </div>
     <div id="proyectsContent" style="display: none;">
         <div class="d-flex">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
+            <h1 class="centered" style="margin-top: 30vh; color: white;">Currently Working ;)</h1>
         </div>
     </div>
     <div id="cvContent" style="display: none;">
@@ -182,6 +187,7 @@
 <script src="js/changeView.js"></script>
 <script src="js/translations.js"></script>
 <script src="js/toastify.js"></script>
+<!--<script src="js/autoScroll.js"></script>-->
 <script>
     $(document).ready(function () {
         const langSwitch = $('#langSwitch');

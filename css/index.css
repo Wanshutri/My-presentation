@@ -186,6 +186,7 @@ svg {
     padding: 0 2vw;
 }
 
+
 .imgSkill {
     width: 8vw;
     height: 16vh;
@@ -232,6 +233,7 @@ svg {
     width: fit-content;
     height: fit-content;
 }
+
 
 @media (max-width: 1000px) {
 
