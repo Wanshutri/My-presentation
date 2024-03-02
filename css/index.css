@@ -234,6 +234,15 @@ svg {
     height: fit-content;
 }
 
+#proyectsContent .card {
+    width: 80%;
+    margin: 0 auto;
+    height: fit-content;
+}
+
+#proyectsContent .card .card-title {
+    font-size: 50%;
+}
 
 @media (max-width: 1000px) {
 

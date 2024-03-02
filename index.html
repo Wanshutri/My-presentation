@@ -101,7 +101,7 @@
             </div>
         </div>
         <div class="d-flex">
-            <h1 data-translate="technologies" class="lT centered teclb" >Technologies</h1>
+            <h1 data-translate="technologies" class="lT centered teclb">Technologies</h1>
         </div>
         <div class="skillsDiv techSec d-flex">
             <div class="skillObject skillGrid">
@@ -161,7 +161,18 @@
     </div>
     <div id="proyectsContent" style="display: none;">
         <div class="d-flex">
-            <h1 class="centered" style="margin-top: 30vh; color: white;">Currently Working ;)</h1>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">League Of Quotes API</h5>
+                    <p class="card-text">Una Api de tipo REST creada con NodeJS y Express. Codigo de Github y host en
+                        Vercel</p>
+                    <div class="d-flex">
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <img src="" alt="">
+            </div>
         </div>
     </div>
     <div id="cvContent" style="display: none;">
@@ -193,6 +204,27 @@
 <script src="js/toastify.js"></script>
 <!--<script src="js/autoScroll.js"></script>-->
 <script>
+
+    fetch('https://league-of-quotes-api.vercel.app/spanish/search?random=true')
+        .then(response => {
+            // Verifica si la respuesta fue exitosa (status code 200)
+            if (!response.ok) {
+                throw new Error('Error en la solicitud');
+            }
+            // Convierte la respuesta a JSON
+            return response.json();
+        })
+        .then(data => {
+            // Hacer algo con los datos recibidos
+            console.log(data);
+        })
+        .catch(error => {
+            // Captura cualquier error que ocurra durante la solicitud
+            console.error('Error:', error);
+        });
+
+
+    alternateViews('p')
     $(document).ready(function () {
         const langSwitch = $('#langSwitch');
 
